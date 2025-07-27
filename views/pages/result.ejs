@@ -1,0 +1,48 @@
+<div class="container mt-3">
+    <h4 class="<%= bgColor %> text-white p-2">Kecocokan CV: <%= precentage %>%</h4>
+    <hr style="height: 1px; background-color: grey; border: none;">
+    <p><%= summaries %></p>
+    <hr style="height: 1px; background-color: grey; border: none;">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered table-striped table-hover">
+                <tr class="bg-dark text-white">
+                    <th>Skill Anda</th>
+                </tr>
+                <% for(let i = 0; i < cvSkills.length; i++) { %>
+                    <tr>
+                        <td><%= cvSkills[i] %></td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-bordered table-striped table-hover">
+                <tr>
+                    <th class="bg-dark text-white">Requirement Skill</th>
+                </tr>
+                <% for(let i = 0; i < skillRequirements.length; i++) { %>
+                        <tr>
+                            <td><%= skillRequirements[i] %></td>
+                        </tr>
+                <% } %>
+            </table>
+        </div>
+        <div class="col-md-12 mt-3">
+            <table class="table table-bordered table-striped table-hover">
+                <tr>
+                    <th class="bg-dark text-white">Skill Yang Belum Terpenuhi</th>
+                </tr>
+                <% for(let i = 0; i < skillNotMets.length; i++) { %>
+                        <tr>
+                            <td><%= skillNotMets[i] %></td>
+                        </tr>
+                <% } %>
+            </table>
+        </div>
+        <h4 class="mt-3">Saran untuk bagian CV</h4>
+        <div style="max-height: 200px; overflow-y: auto;" class="p-2">
+            <p><%= advices %></p>
+        </div>
+    </div>
+</div>

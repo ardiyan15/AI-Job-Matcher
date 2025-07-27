@@ -1,0 +1,18 @@
+<h2>Hasil Ekstraksi</h2>
+<pre><%= text %></pre>
+
+<h2>Hasil Analisis AI</h2>
+<% if (analysis.summary) { %>
+  <h3>Summary:</h3>
+  <p><%= analysis.summary %></p>
+<% } %>
+
+<% if (analysis.presentase) { %>
+  <h3>Presentase Kecocokan:</h3>
+  <p><%= analysis.presentase + "%" %></p>
+<% } %>
+
+<% if (analysis.saran) { %>
+  <h3>Minat:</h3>
+  <p><%= analysis.saran %></p>
+<% } %>

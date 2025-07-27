@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload CV</title>
+</head>
+<body>
+  <h1>Upload CV</h1>
+  <form action="/cv/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".pdf,.docx" required />
+    <br>
+    <br>
+    <label for="">Job Description</label> <br>
+    <textarea name="job_desc" id=""></textarea>
+    <br> <br>
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>
