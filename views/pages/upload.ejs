@@ -1,11 +1,14 @@
-<div class="container mt-3">
-  <h3>Upload CV</h3>
-  <form action="/cv/upload" method="post" enctype="multipart/form-data">
-    <input class="form-control" type="file" name="file" accept=".pdf,.docx" required />
-    <br>
-    <br>
-    <label for="">Job Description</label> <br>
-    <textarea rows="10" class="form-control" name="job_desc" id=""></textarea>
-    <br>
-    <button type="submit" class="btn btn-sm rounded btn-primary">Analyse</button>
-  </form>
+<div class="card">
+
+  <div class="container mt-3">
+    <h3>Upload CV</h3>
+    <form action="/cv/upload" method="post" enctype="multipart/form-data">
+      <input class="form-control" type="file" name="file" accept=".pdf,.docx" required />
+      <br>
+      <br>
+      <label for="">Job Description</label> <br>
+      <textarea rows="10" class="form-control" name="job_desc" id=""></textarea>
+      <br>
+      <button type="submit" class="btn btn-sm rounded btn-primary">Analyse</button>
+    </form>
+  </div>

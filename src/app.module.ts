@@ -5,6 +5,7 @@ import { CvModule } from './cv/cv.module';
 import { ConfigModule } from '@nestjs/config';
 import { OpenaiService } from './openai/openai.service';
 import { AuthModule } from './auth/auth.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -12,7 +13,8 @@ import { AuthModule } from './auth/auth.module';
       isGlobal: true
     }),
     CvModule,
-    AuthModule
+    AuthModule,
+    DashboardModule
   ],
   controllers: [AppController],
   providers: [AppService, OpenaiService],

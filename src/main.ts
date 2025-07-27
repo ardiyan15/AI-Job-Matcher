@@ -8,6 +8,11 @@ import * as cookieParser from 'cookie-parser'
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.use(cookieParser())
+  app.useStaticAssets(join(__dirname, '..', 'public/assets'), {
+    prefix: '/assets/'
+  })
+
+  console.log('Static assets served from:', join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('ejs');
   app.use(expressLayouts);
