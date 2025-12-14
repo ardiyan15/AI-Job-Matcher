@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { CvModule } from './cv/cv.module';
 import { ConfigModule } from '@nestjs/config';
 import { OpenaiService } from './openai/openai.service';
-import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 @Module({
@@ -13,7 +12,6 @@ import { DashboardModule } from './dashboard/dashboard.module';
       isGlobal: true
     }),
     CvModule,
-    AuthModule,
     DashboardModule
   ],
   controllers: [AppController],
