@@ -16,4 +16,7 @@ export class User {
 
     @Column()
     role: string;
+
+    @Column({type: 'varchar', length: 255, nullable: true, select: false})
+    refreshTokenHash: string | null
 }

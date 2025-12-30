@@ -6,8 +6,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { OpenaiService } from './openai/openai.service';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { config } from 'dotenv';
 import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -28,6 +28,7 @@ import { UserModule } from './user/user.module';
         seeds: ['dist/database/seeds/*.js']
       })
     }),
+    AuthModule,
     UserModule,
     CvModule,
     DashboardModule
